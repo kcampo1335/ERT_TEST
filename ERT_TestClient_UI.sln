@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERT_TestClient_UI", "ERT_TestClient_UI\ERT_TestClient_UI.csproj", "{6122777A-6BE9-4590-BC7F-8D46D164CF83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6122777A-6BE9-4590-BC7F-8D46D164CF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6122777A-6BE9-4590-BC7F-8D46D164CF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6122777A-6BE9-4590-BC7F-8D46D164CF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6122777A-6BE9-4590-BC7F-8D46D164CF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {660E4401-D747-4506-9EEA-A9338E1C6239}
+	EndGlobalSection
+EndGlobal
