@@ -14,3 +14,33 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.btn-okayKey {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-okayValue {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-removeMetadata {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-addMetadata {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-submitChanges {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
