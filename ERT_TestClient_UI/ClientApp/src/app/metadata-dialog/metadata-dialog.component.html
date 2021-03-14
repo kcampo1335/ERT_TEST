@@ -1,70 +1,11 @@
-<h1>Metadata Dialog</h1>
-
-<!--How to make a popup from using a button! NOTE: this only works when in the same module. Working on trying
-  to make a new module be a popup.-->
-<button class="btn btn-primary" (click)="popup=true">Session Metadata</button>
+<h1> Metadata Dialog</h1>
+<input type="text" #txtValue>
+<button class="btn btn-primary" valueButton="/" (click)="getTextBoxVal(txtValue)">Get Value</button>
 <br />
-<div class="overlay" *ngIf="popup">
-  <div class="popup">
-    <h2>Here i am</h2>
-    <a class="close" (click)="popup = false">&times;</a>
-    <div class="content">
-      you have selected this event
-    </div>
-  </div>
-</div>
-<!------------------------------------------------------------------------------------->
-<div>
-  <form>
-    <br>
-    <br>
-    <label for="enterKey">Enter Key:</label>
-    <input type="text" id="keyEntry" name="keyEntry">
-    <button class="btn btn-okayKey" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <label for="enterValue">Enter Value:</label>
-    <input type="text" id="valueEntry" name="valueEntry">
-    <button class="btn btn-okayValue" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <button class="btn btn-removeMetadata" (click)="counter.component.html">Remove Metadata</button><br>
-    <br>
-    <br>
-    <button class="btn btn-addMetadata" (click)="counter.component.html">Add Metadata</button><br>
-    <br>
-    <br>
-    <style>
-      table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
+<input type="text" #txtKey>
+<button class="btn btn-primary" keyButton="/" (click)="getTextBoxVal(txtKey)">Get Key</button>
 
-      th, td {
-        padding: 15px;
-      }
-    </style>
-    <table style="width:50%">
-      <tr>
-        <th>Metadata File Name</th>
-        <th>Heading 2</th>
-        <th>Heading 3</th>
-      </tr>
-      <tr>
-        <td>metadataFile</td>
-        <td>info1</td>
-        <td>info1.1</td>
-      </tr>
-      <tr>
-        <td>metadataFile2</td>
-        <td>info2</td>
-        <td>info2.2</td>
-      </tr>
-    </table>
-    <br>
-    <br>
-    <button class="btn btn-Submit Changes" (click)="counter.component.html">Submit Changes</button>
-    <br>
-    <br>
-  </form>
-</div>
+<h2>Added Metadata</h2>
+<ul>
+  <li *ngFor="let item of items">{{item.textKey}}</li>
+</ul>

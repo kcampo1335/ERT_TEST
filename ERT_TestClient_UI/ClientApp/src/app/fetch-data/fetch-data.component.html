@@ -1,73 +1,55 @@
+<html ng-app="metadataApp">
+
+<head>
+
+  <style>
+    ul li{
+      list-style-type:none;
+    }
+
+  </style>
+
+</head>
+<body ng-controller="metadataCtrl">
 <img src="assets/images/CallMiner-Logo.png" alt="Callminer Logo">
-<h1>Metadata Dialog</h1>
+<h1> Metadata Dialog</h1>
+  <form ng-submit="metadataAdd()">
 
-<div>
-  <form>
-    <br>
-    <br>
-    <label for="enterKey">Enter Key:</label>
-    <input type="text" id="keyEntry" name="keyEntry">
-    <button class="btn btn-okayKey" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <label for="enterValue">Enter Value:</label>
-    <input type="text" id="valueEntry" name="valueEntry">
-    <button class="btn btn-okayValue" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <button class="btn btn-removeMetadata" (click)="counter.component.html">Remove Metadata</button><br>
-    <br>
-    <br>
-    <button class="btn btn-addMetadata" (click)="counter.component.html">Add Metadata</button><br>
-    <br>
-    <br>
-    <style>
-      table, th, td {
-        text-align: center;
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
+    <input type="text" class="form-control" placeholder= " Enter name here...." ng-model="metadataInput" />
+    <input type="submit" value="Add" class="btn btn-success" />
 
-      th, td {
-        padding: 15px;
-      }
-    </style>
-    <table style="width:50%">
-      <tr>
-        <th colspan="7">Added Metadata</th>
-      </tr>
-      <tr>
-        <th>Agent ID</th>
-        <th>Department</th>
-        <th>State</th>
-        <th>Agent Group</th>
-        <th>Location</th>
-        <th>Audio Language</th>
-        <th>Audio Format</th>
-      </tr>
-      <tr>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Florida</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-      </tr>
-      <tr>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Texas</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-      </tr>
-    </table>
-    <br>
-    <br>
-    <button class="btn btn-submitChanges" (click)="counter.component.html">Submit Changes</button>
-    <br>
-    <br>
   </form>
-</div>
+  <div class="form-control">
+  <div class="form-control">
+
+    <ul ng-repeat="x in metadataList">
+      <li>
+        <input type="checkbox"/> <span>{{x.metadataText}}</span>
+      </li>
+
+    </ul>
+
+  </div>
+  <button class="btn btn-danger"> Delete </button>
+
+</body>
+</html>
+
+<script>
+
+  var app = angular.module("metadataApp", []);
+
+  app.controller("metadataCtrl", function ($scope) {
+
+    $scope.metadataList = [{ metadataText: 'florida', done: false }];
+
+    $scope.metadataAdd = function () {
+      $scope.metadataList.push({ metadataText: $scope.metadataInput, done: false });
+      $scope.metadataInput = "";
+    };
+    
+    });
+
+  
+
+</script>
