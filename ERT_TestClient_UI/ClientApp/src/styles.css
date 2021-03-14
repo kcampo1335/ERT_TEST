@@ -15,32 +15,42 @@ code {
   border-color: #1861ac;
 }
 
-.btn-okayKey {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+body {
+  background-image: linear-gradient(to right, #00a7e2, #006991);
+  display: inline;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-.btn-okayValue {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+div.foreground {
+  background-color: #00a7e2;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-color: #7ec6e2;
 }
 
-.btn-removeMetadata {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+img.logo {
+  height: 100%;
+  width: 100%;
 }
 
-.btn-addMetadata {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+img.nav-logo {
+  height: 50px;
+  width: 150px;
 }
 
-.btn-submitChanges {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+form {
+    display: inline-table;
+}
+
+label, p {
+  font-family: 'Trebuchet MS';
+}
+
+h1 {
+  font-family: 'Georgia ';
+  font-size: 48px;
 }
