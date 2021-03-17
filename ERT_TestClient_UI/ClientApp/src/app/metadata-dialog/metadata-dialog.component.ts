@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
 //  styleUrls: ["./metadata-dialog.metadataStyles.css"]
 })
 export class MetadataComponent {
-}
 
+  getVal(item) {
+    console.log(item.target.value)
+  }
+}

@@ -1,73 +1,36 @@
-<img src="assets/images/CallMiner-Logo.png" alt="Callminer Logo">
-<h1>Metadata Dialog</h1>
 
-<div>
-  <form>
-    <br>
-    <br>
-    <label for="enterKey">Enter Key:</label>
-    <input type="text" id="keyEntry" name="keyEntry">
-    <button class="btn btn-okayKey" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <label for="enterValue">Enter Value:</label>
-    <input type="text" id="valueEntry" name="valueEntry">
-    <button class="btn btn-okayValue" (click)="counter.component.html">OKAY</button><br>
-    <br>
-    <br>
-    <button class="btn btn-removeMetadata" (click)="counter.component.html">Remove Metadata</button><br>
-    <br>
-    <br>
-    <button class="btn btn-addMetadata" (click)="counter.component.html">Add Metadata</button><br>
-    <br>
-    <br>
-    <style>
-      table, th, td {
-        text-align: center;
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
 
-      th, td {
-        padding: 15px;
-      }
-    </style>
-    <table style="width:50%">
-      <tr>
-        <th colspan="7">Added Metadata</th>
-      </tr>
-      <tr>
-        <th>Agent ID</th>
-        <th>Department</th>
-        <th>State</th>
-        <th>Agent Group</th>
-        <th>Location</th>
-        <th>Audio Language</th>
-        <th>Audio Format</th>
-      </tr>
-      <tr>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Florida</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-      </tr>
-      <tr>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Texas</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-        <td>Random()</td>
-      </tr>
-    </table>
-    <br>
-    <br>
-    <button class="btn btn-submitChanges" (click)="counter.component.html">Submit Changes</button>
-    <br>
-    <br>
-  </form>
+<div class="fetchData">
+
+  <h1> Metadata Dialog</h1>
+ 
 </div>
+
+<div class="row">
+  <div class="column">
+    <label for="Key">Please Enter A Key:</label>
+    <input type="text" [(ngModel)]="inputTxtKey" placeholder="Key">
+    <button class="btn btn-primary" (click)="addToListKey()"> Add Key </button>
+
+
+    <ul style="list-style-type:none;">
+      <li *ngFor="let key of arrListKey; let i = index" (click)="removeKeyItem(i)">
+        <label>{{key}}</label>
+        <button class="btn btn-primary" (click)="removeItem(i)"> X </button>
+      </li>
+    </ul>
+  </div>
+  <div class="column">
+    <label for="Value">Please Enter A Value:   </label>
+    <input type="text" [(ngModel)]="inputTxtVal" placeholder="Value">
+    <button class="btn btn-primary" (click)="addToListVal()"> Add Value</button>
+
+    <ul style="list-style-type:none;">
+      <li *ngFor="let val of arrListVal; let i = index" (click)="removeValItem(i)">
+        <label>{{val}}</label>
+        <button class="btn btn-primary" (click)="removeValItem(i)"> X </button>
+      </li>
+    </ul>
+  </div>
+</div>
+  <button class="btn btn-primary"> Submit Changes </button>
