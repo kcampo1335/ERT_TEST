@@ -6,22 +6,31 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fetch-data-component',
-  templateUrl: './fetch-data.component.html'
- // styleUrls: ["./fetch-data.fetchDataStyles.css"]
+  templateUrl: './fetch-data.component.html',
+  styleUrls: ["./fetchDataStyles.css"]
 })
 
 export class FetchDataComponent {
 
-  arrList = [];
-  inputTxtKeyVal = '';
+  arrListKey = [];
+  arrListVal = [];
+  inputTxtKey = '';
+  inputTxtVal = '';
 
-  addToList(){
-    if (this.inputTxtKeyVal != '' && this.inputTxtKeyVal.includes(',')) {
-      this.arrList.push(this.inputTxtKeyVal);
+  addToListKey(){
+    if (this.inputTxtKey != '') {
+      this.arrListKey.push(this.inputTxtKey);
     }
   }
-
-  removeItem(index : number){
-    this.arrList.splice(index, 1);
+  removeKeyItem(index : number){
+    this.arrListKey.splice(index, 1);
+  }
+  addToListVal() {
+    if (this.inputTxtVal != '') {
+      this.arrListVal.push(this.inputTxtVal);
+    }
+  }
+  removeValItem(index: number) {
+    this.arrListVal.splice(index, 1);
   }
 }

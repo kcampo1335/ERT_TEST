@@ -1,24 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+
+.column {
+  float: left;
+  width: 50%;
+  background: #00a7e2;
 }
 
-code {
-  color: #e01a76;
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+
+
+label {
+  font-family: 'Georgia ';
+  font-size: 24px;
+  font-weight: bold;
 }
 
-ul {
-  border: 1px solid black;
-  padding-right: 0px;
-  padding-left: 28px;
-  width: 50px;
-  border-radius: 5px;
-}
