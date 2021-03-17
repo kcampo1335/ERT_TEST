@@ -1,55 +1,27 @@
-<html ng-app="metadataApp">
 
-<head>
 
-  <style>
-    ul li{
-      list-style-type:none;
-    }
+<div class="fetchData">
 
-  </style>
+  <h1> Metadata Dialog</h1>
 
-</head>
-<body ng-controller="metadataCtrl">
-<img src="assets/images/CallMiner-Logo.png" alt="Callminer Logo">
-<h1> Metadata Dialog</h1>
-  <form ng-submit="metadataAdd()">
+  <h2> Please enter a Key and Value</h2>
 
-    <input type="text" class="form-control" placeholder= " Enter name here...." ng-model="metadataInput" />
-    <input type="submit" value="Add" class="btn btn-success" />
+  <input type="text" [(ngModel)]="inputTxtKeyVal" placeholder="Key, Value">
 
-  </form>
-  <div class="form-control">
-  <div class="form-control">
+  <button class="btn btn-primary" (click)="addToList()"> Add </button>
 
-    <ul ng-repeat="x in metadataList">
-      <li>
-        <input type="checkbox"/> <span>{{x.metadataText}}</span>
-      </li>
+</div>
 
-    </ul>
+<ul style="list-style-type:none;">
 
-  </div>
-  <button class="btn btn-danger"> Delete </button>
+  <li *ngFor="let keyVal of arrList; let i = index" (click)="removeItem(i)">
 
-</body>
-</html>
+    <label>{{keyVal}}</label>
 
-<script>
+    <button (click)="removeItem(i)"> X </button>
 
-  var app = angular.module("metadataApp", []);
+  </li>
 
-  app.controller("metadataCtrl", function ($scope) {
+</ul>
 
-    $scope.metadataList = [{ metadataText: 'florida', done: false }];
-
-    $scope.metadataAdd = function () {
-      $scope.metadataList.push({ metadataText: $scope.metadataInput, done: false });
-      $scope.metadataInput = "";
-    };
-    
-    });
-
-  
-
-</script>
+<button class="btn btn-primary" > Submit Changes </button>

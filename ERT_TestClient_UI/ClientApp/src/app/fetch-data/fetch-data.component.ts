@@ -2,29 +2,26 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
+
+
 @Component({
-  selector: 'app-fetch-data',
+  selector: 'app-fetch-data-component',
   templateUrl: './fetch-data.component.html'
+ // styleUrls: ["./fetch-data.fetchDataStyles.css"]
 })
+
 export class FetchDataComponent {
 
-  getTextBoxVal(item) {
- 
+  arrList = [];
+  inputTxtKeyVal = '';
+
+  addToList(){
+    if (this.inputTxtKeyVal != '' && this.inputTxtKeyVal.includes(',')) {
+      this.arrList.push(this.inputTxtKeyVal);
+    }
   }
-  
 
-  public forecasts: WeatherForecast[];
-
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+  removeItem(index : number){
+    this.arrList.splice(index, 1);
   }
-}
-
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
 }
