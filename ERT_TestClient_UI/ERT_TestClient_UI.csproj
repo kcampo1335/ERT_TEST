@@ -30,6 +30,7 @@
   <ItemGroup>
     <TypeScriptCompile Remove="ClientApp\src\app\home-page\home-page.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\metadata-dialog\metadata-dialog.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\profile\profile.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
