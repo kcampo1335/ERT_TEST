@@ -10,7 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { MetadataComponent } from './metadata-dialog/metadata-dialog.component';
+import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AudioComponent } from './audio/audio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MetadataComponent } from './metadata-dialog/metadata-dialog.component';
     CounterComponent,
     FetchDataComponent,
     HomePageComponent,
-    MetadataComponent
+    MetadataDialogComponent,
+    ProfileComponent,
+    AudioComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +35,9 @@ import { MetadataComponent } from './metadata-dialog/metadata-dialog.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'home-page', component: HomePageComponent },
-      { path: 'metadata-dialog', component: MetadataComponent },
+      { path: 'metadata-dialog', component: MetadataDialogComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'audio', component: AudioComponent },
     ])
   ],
   providers: [],

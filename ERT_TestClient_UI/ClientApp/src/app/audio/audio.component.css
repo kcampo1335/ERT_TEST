@@ -9,8 +9,20 @@ code {
   color: #e01a76;
 }
 
-.btn-primary {
+.notButton {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  background: #00a7e2;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
