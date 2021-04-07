@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\audio\audio.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\home-page\home-page.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\metadata-dialog\metadata-dialog.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\profile\profile.component.ts" />

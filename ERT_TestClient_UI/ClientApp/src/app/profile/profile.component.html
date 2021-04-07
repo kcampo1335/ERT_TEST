@@ -1,32 +1,15 @@
+<div>
+  <form>
+    <button class="btn btn-primary" routerLink="/audio">Audio</button>
+    <input type="text" id="selectAudio" name="selectAudio" placeholder="Audio name(s)"><br />
+    <button class="btn btn-primary" routerLink="/">Environment</button>
+    <input type="text" id="selectEnvironment" name="selectEnvironment" placeholder="Environment"><br />
+    <button class="btn btn-primary" routerLink="/">Profile Name</button>
+    <input type="text" id="profileName" name="profileName" placeholder="Profile name"><br />
+    <table>
+      <th><button class="btn btn-primary" routerLink="/">Delete</button></th>
 
-
-  <h1> Metadata Dialog</h1>
-
-<div class="row">
-  <div class="column">
-    <label for="Key">Please Enter A Key:</label>
-    <input type="text" [(ngModel)]="inputTxtKey" placeholder="Key">
-    <button class="btn btn-primary" (click)="addToListKey()"> Add Key </button>
-
-
-    <ul style="list-style-type:none;">
-      <li *ngFor="let key of arrListKey; let i = index" (click)="removeKeyItem(i)">
-        <label>{{key}}</label>
-        <button class="btn btn-primary" (click)="removeItem(i)"> X </button>
-      </li>
-    </ul>
-  </div>
-  <div class="column">
-    <label for="Value">Please Enter A Value:   </label>
-    <input type="text" [(ngModel)]="inputTxtVal" placeholder="Value">
-    <button class="btn btn-primary" (click)="addToListVal()"> Add Value</button>
-
-    <ul style="list-style-type:none;">
-      <li *ngFor="let val of arrListVal; let i = index" (click)="removeValItem(i)">
-        <label>{{val}}</label>
-        <button class="btn btn-primary" (click)="removeValItem(i)"> X </button>
-      </li>
-    </ul>
-  </div>
+      <th><button class="btn btn-primary" routerLink="/">Save</button></th>
+    </table>
+  </form>
 </div>
-<button class="btn btn-primary"> Submit Changes </button>

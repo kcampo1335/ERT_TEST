@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AudioComponent } from './audio/audio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.compo
     CounterComponent,
     FetchDataComponent,
     HomePageComponent,
-    MetadataDialogComponent
+    MetadataDialogComponent,
+    ProfileComponent,
+    AudioComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,6 +36,8 @@ import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.compo
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'home-page', component: HomePageComponent },
       { path: 'metadata-dialog', component: MetadataDialogComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'audio', component: AudioComponent },
     ])
   ],
   providers: [],
