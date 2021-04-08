@@ -40,6 +40,7 @@ import { MetadataEnvironmentComponent } from './metadata-environment/metadata-en
       { path: 'metadata-dialog', component: MetadataDialogComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'audio', component: AudioComponent },
+      { path: 'metadata-environment', component: MetadataEnvironmentComponent },
     ])
   ],
   providers: [],
