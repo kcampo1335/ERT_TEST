@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'app-home-page-component',
+  selector: 'app-home',
   templateUrl: './home-page.component.html',
-//  styleUrls: ["./home-page.homePageStyles.css"]
+  styleUrls: ["./home-page.component.css"]
 })
 export class HomePageComponent {
 
