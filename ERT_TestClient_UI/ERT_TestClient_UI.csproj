@@ -28,9 +28,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\metadata-environment\metadata-environment.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <TypeScriptCompile Remove="ClientApp\src\app\audio\audio.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\home-page\home-page.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\metadata-dialog\metadata-dialog.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\metadata-environment\metadata-environment.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\profile\profile.component.ts" />
   </ItemGroup>
 

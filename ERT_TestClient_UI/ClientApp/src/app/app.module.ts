@@ -13,6 +13,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AudioComponent } from './audio/audio.component';
+import { MetadataEnvironmentComponent } from './metadata-environment/metadata-environment.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AudioComponent } from './audio/audio.component';
     HomePageComponent,
     MetadataDialogComponent,
     ProfileComponent,
-    AudioComponent
+    AudioComponent,
+    MetadataEnvironmentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,6 +40,7 @@ import { AudioComponent } from './audio/audio.component';
       { path: 'metadata-dialog', component: MetadataDialogComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'audio', component: AudioComponent },
+      { path: 'metadata-environment', component: MetadataEnvironmentComponent },
     ])
   ],
   providers: [],
