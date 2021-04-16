@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-audio-component',
-  templateUrl: './audio.component.html',
-  styleUrls: ["./audio.component.css"]
+  selector: 'app-home-audio-component',
+  templateUrl: './home-audio.component.html',
+  styleUrls: ["./home-audio.component.css"]
 })
 
-export class AudioComponent {
+export class HomeAudioComponent {
 
   arrList = [];
   inputTxtKey = '';

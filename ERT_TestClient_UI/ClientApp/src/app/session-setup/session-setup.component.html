@@ -1,0 +1,47 @@
+<div class="foreground">
+  <h2>Start Request Options:</h2>
+  <table>
+    <tr>
+      <th><button class="btn btn-primary" routerLink="/audio-metadata">Select Metadata</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Protocol</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Request Timeout</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Add Recognizer Hints</button></th>
+    </tr>
+    <tr>
+      <th><button class="btn btn-primary" routerLink="/session-setup">AgentId</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Format</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Language</button></th>
+      <th><button class="btn btn-primary" routerLink="/session-setup">Select Requested Processes</button></th>
+    </tr>
+  </table>
+  <br />
+  <h2>Metadata Request Options:</h2>
+  <table>
+    <th>
+      <input type="checkbox" class="round" id="checkbox" />
+      <label for="checkbox">Enabled</label>
+    </th>
+    <th><button class="btn btn-primary" routerLink="/audio-metadata">Select Metadata</button></th>
+    <th><button class="btn btn-primary" routerLink="/session-setup">Select After Slice</button></th>
+  </table>
+  <br />
+  <h2>Audio Request Options</h2>
+  <table>
+    <th><button class="btn btn-primary" routerLink="/session-setup">Playback Rate</button></th>
+    <th>
+      <input type="checkbox" class="round" id="randoEnabled" />
+      <label for="randoEnabled">Randomization Enabled</label>
+    </th>
+    <th><button class="btn btn-primary" routerLink="/session-setup">Randomization Settings</button></th>
+  </table>
+  <br />
+  <h2>End Request Options</h2>
+  <table>
+    <th><button class="btn btn-primary" routerLink="/audio-metadata">Select Metadata</button></th>
+    <th><button class="btn btn-primary" routerLink="/session-setup">Delay</button></th>
+  </table>
+  <br />
+  <div class="rightalign">
+    <button class="btn btn-primary" routerLink="/home-audio">Submit Changes</button>
+  </div>
+</div>

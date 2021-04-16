@@ -2,11 +2,11 @@
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #ffffff;
 }
 
 code {
-  color: #e01a76;
+  color: #ffffff;
 }
 
 .btn-primary {
@@ -22,13 +22,22 @@ body {
   width: 100%;
 }
 
-label, p {
+label {
+  font-family: 'Trebuchet MS';
+  padding: 5px;
+}
+
+p {
   font-family: 'Trebuchet MS';
 }
 
 h1 {
   font-family: 'Georgia ';
   font-size: 48px;
+}
+
+h2 {
+  font-family: 'Georgia ';
 }
 
 div.foreground {

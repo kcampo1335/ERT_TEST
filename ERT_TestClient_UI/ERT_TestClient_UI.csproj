@@ -28,14 +28,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\environment\environment.component.ts" />
+    <None Remove="ClientApp\src\app\history\history.component.ts" />
     <None Remove="ClientApp\src\app\metadata-environment\metadata-environment.component.ts" />
+    <None Remove="ClientApp\src\app\output\output.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\audio-metadata\audio-metadata.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\audio\audio.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\home-audio\home-audio.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\home-page\home-page.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\metadata-dialog\metadata-dialog.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\profile\profile.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\session-setup\session-setup.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

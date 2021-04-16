@@ -1,19 +1,21 @@
-<h1> Audio</h1>
+<div class="foreground">
+  <h2> Please enter an audio name:</h2>
 
-<div class="row">
-  <div class="column">
-    <label for="audioName">Please enter an audio file:</label>
-    <input type="text" [(ngModel)]="inputTxtAudio" placeholder="Audio name">
-    <button class="btn btn-primary" (click)="addToListAudio()"> Add Audio </button>
+  <input type="text" [(ngModel)]="inputTxtKey" placeholder="Audio Name">
+  <button class="btn btn-primary" (click)="addToList()"> Upload </button>
+
+  <ul style="list-style-type:none;">
+
+    <li *ngFor="let keyVal of arrList; let i = index" (click)="removeItem(i)">
+
+      <button class="btn-primary" (click)="removeItem(i)"> X </button>
+      <label>{{keyVal}}</label>
+      <button class="btn-primary" routerLink="/session-setup"> Change Session Setup </button>
 
 
-    <ul style="list-style-type:none;">
-      <li *ngFor="let key of arrListAudio; let i = index" (click)="removeAudioItem(i)">
-        <button class="btn btn-primary" (click)="removeValItem(i)"> X </button>
-        <label>{{val}}</label>
-        <button class="btn btn-primary" routerLink="/metadata-dialog"> Change session setup </button>
-      </li>
-    </ul>
-  </div>
+    </li>
+
+  </ul>
+
+  <button class="btn btn-primary" routerLink="/profile"> Submit Changes </button>
 </div>
-<button class="btn btn-primary"> Submit Changes </button>

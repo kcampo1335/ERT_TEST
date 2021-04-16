@@ -1,0 +1,12 @@
+.display {
+  padding: 5px;
+  border: solid;
+  border-width: 1px;
+  font-family: 'Trebuchet MS';
+}
+
+
+.data {
+  text-align: center;
+  font-family: 'Trebuchet MS';
+}

@@ -1,16 +1,18 @@
-<div>
+<div class="foreground">
   <form>
-    <input type="submit" value="Load Profile">
-    <input type="text" id="loadProfile" name="loadProfile"><br>
+    <button class="btn btn-primary" routerLink="/home-page">Load Profile</button>
+    <input type="text" id="loadProfile" name="loadProfile" placeholder="Profile Name"><br><br />
     <button class="btn btn-primary" routerLink="/metadata-dialog">Session Metadata</button><br />
-
-    <input type="submit" value="Session History">
     <br />
-    <input type="submit" value="Select Environment">
-    <input type="text" id="selectEnvironment" name="selectEnvironment">
-    <br>
+    <button class="btn btn-primary" routerLink="/history">Session History</button>
+    <br /><br />
+    <button class="btn btn-primary" routerLink="/home-audio">Select Audio</button><br />
+    <br />
+    <button class="btn btn-primary" routerLink="/metadata-environment">Select Environment</button>
+    <input type="text" id="selectEnvironment" name="selectEnvironment" placeholder="Environment name">
+    <br><br />
     <button class="btn btn-primary" routerLink="/profile">Create Profile</button><br />
-    <br />
-    <button class="btn btn-primary" routerLink="/">Run</button>
+    <br /><br />
+    <button class="btn btn-primary" routerLink="/output">Run</button>
   </form>
 </div>

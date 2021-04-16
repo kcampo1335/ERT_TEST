@@ -14,6 +14,12 @@ import { MetadataDialogComponent } from './metadata-dialog/metadata-dialog.compo
 import { ProfileComponent } from './profile/profile.component';
 import { AudioComponent } from './audio/audio.component';
 import { MetadataEnvironmentComponent } from './metadata-environment/metadata-environment.component';
+import { EnvironmentComponent } from './environment/environment.component';
+import { OutputComponent } from './output/output.component';
+import { SessionSetupComponent } from './session-setup/session-setup.component';
+import { HomeAudioComponent } from './home-audio/home-audio.component';
+import { AudioMetadataComponent } from './audio-metadata/audio-metadata.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { MetadataEnvironmentComponent } from './metadata-environment/metadata-en
     MetadataDialogComponent,
     ProfileComponent,
     AudioComponent,
-    MetadataEnvironmentComponent
+    MetadataEnvironmentComponent,
+    EnvironmentComponent,
+    OutputComponent,
+    SessionSetupComponent,
+    HomeAudioComponent,
+    AudioMetadataComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -41,6 +53,12 @@ import { MetadataEnvironmentComponent } from './metadata-environment/metadata-en
       { path: 'profile', component: ProfileComponent },
       { path: 'audio', component: AudioComponent },
       { path: 'metadata-environment', component: MetadataEnvironmentComponent },
+      { path: 'environment', component: EnvironmentComponent },
+      { path: 'output', component: OutputComponent },
+      { path: 'session-setup', component: SessionSetupComponent },
+      { path: 'home-audio', component: HomeAudioComponent },
+      { path: 'audio-metadata', component: AudioMetadataComponent },
+      { path: 'history', component: HistoryComponent },
     ])
   ],
   providers: [],

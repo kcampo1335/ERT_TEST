@@ -1,0 +1,80 @@
+
+
+<div class="foreground">
+  <h2> Please enter a Key and Value</h2>
+
+  <input type="text" [(ngModel)]="inputTxtKey" placeholder="Key">
+  <input type="text" [(ngModel)]="inputTxtVal" placeholder="Value">
+  <button class="btn btn-primary" (click)="addToList()"> Add </button>
+
+
+
+  <ul style="list-style-type:none;">
+
+    <li *ngFor="let keyVal of arrList; let i = index" (click)="removeItem(i)">
+
+      <button class="btn-primary" (click)="removeItem(i)"> X </button>
+      <label>{{keyVal}}</label>
+
+
+
+    </li>
+
+  </ul>
+  <table>
+    <th><button class="btn btn-primary" routerLink="/session-setup"> Submit Changes </button></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th><button class="btn btn-primary" routerLink="/session-setup"> Back </button></th>
+  </table>
+</div>
