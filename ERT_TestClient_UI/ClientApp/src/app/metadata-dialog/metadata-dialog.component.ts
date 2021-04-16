@@ -12,25 +12,17 @@ import { HttpClient } from '@angular/common/http';
 
 export class MetadataDialogComponent {
 
-  arrListKey = [];
-  arrListVal = [];
+  arrList = [];
   inputTxtKey = '';
   inputTxtVal = '';
 
-  addToListKey() {
-    if (this.inputTxtKey != '') {
-      this.arrListKey.push(this.inputTxtKey);
+  addToList() {
+    if (this.inputTxtKey != '' && this.inputTxtVal != '') {
+      this.arrList.push(this.inputTxtKey + ' = ' + this.inputTxtVal);
     }
   }
-  removeKeyItem(index: number) {
-    this.arrListKey.splice(index, 1);
-  }
-  addToListVal() {
-    if (this.inputTxtVal != '') {
-      this.arrListVal.push(this.inputTxtVal);
-    }
-  }
-  removeValItem(index: number) {
-    this.arrListVal.splice(index, 1);
+
+  removeItem(index: number) {
+    this.arrList.splice(index, 1);
   }
 }
